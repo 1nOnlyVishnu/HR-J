@@ -1,0 +1,26 @@
+ public static void reversePrint(SinglyLinkedListNode llist) {
+    // Write your code here
+        SinglyLinkedListNode temp = llist;//will be the head from last
+        
+         SinglyLinkedListNode after = temp.next;
+        SinglyLinkedListNode before = null;
+       
+while(temp!=null){
+        after = temp.next;
+        temp.next = before;
+        before = temp;
+        temp = after;
+}
+
+
+while(before!=null){
+    System.out.println(before.data);
+    before = before.next;
+}
+      
+        
+        
+        
+        
+        
+    }
