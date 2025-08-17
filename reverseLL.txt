@@ -1,0 +1,38 @@
+class Result {
+
+    /*
+     * Complete the 'reverse' function below.
+     *
+     * The function is expected to return an INTEGER_SINGLY_LINKED_LIST.
+     * The function accepts INTEGER_SINGLY_LINKED_LIST llist as parameter.
+     */
+
+    /*
+     * For your reference:
+     *
+     * SinglyLinkedListNode {
+     *     int data;
+     *     SinglyLinkedListNode next;
+     * }
+     *
+     */
+
+    public static SinglyLinkedListNode reverse(SinglyLinkedListNode llist) {
+    // Write your code here
+    
+    SinglyLinkedListNode temp = llist;
+    SinglyLinkedListNode before = null;
+    SinglyLinkedListNode after = temp;
+    
+    while(temp!=null){
+        after = temp.next;
+        temp.next = before;
+        before = temp;
+        temp = after;
+    }
+    
+    
+    return before;
+    }
+
+}
